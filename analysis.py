@@ -27,7 +27,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 def createDictionary(url):
 
-    driver=webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 
     driver.get(url)
     wait = WebDriverWait(driver, 10)
@@ -73,6 +73,7 @@ def createDictionary(url):
         'CaseName': caseName,
         'Odds': odds,
         'Prices': prices,
-        'expectation': expectation
+        'Expectation': expectation
     }
 
+    return caseDictionary
