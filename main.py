@@ -17,7 +17,7 @@ import analysis as ca
 
 # Main Script #
 
-links_array = np.genfromtxt('freeCaseData.txt', dtype=str, delimiter='\n')
+links_array = np.genfromtxt('./URL_DATA/freeCaseData.txt', dtype=str, delimiter='\n')
 
 caseRepository = pd.DataFrame(columns=['Name', 'Price', 'Expected'])
 
