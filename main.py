@@ -17,16 +17,17 @@ import analysis as ca
 
 # Main Script #
 
-links_array = np.genfromtxt('urlDataBase.txt', dtype=str, delimiter='\n')
+links_array = np.genfromtxt('freeCaseData.txt', dtype=str, delimiter='\n')
 
-caseRepository = pd.DataFrame(columns=['Name', 'Price', 'Expected Value'])
+caseRepository = pd.DataFrame(columns=['Name', 'Price', 'Expected'])
 
 for link in links_array:
     currDict = ca.createDictionary(link)
-    caseRepository = caseRepository._append({'Name': currDict['CaseName']}, ignore_index=True)
-    caseRepository = caseRepository._append({'Expected Value': currDict['Expectation']})
+    caseRepository = caseRepository._append({'Name': currDict['CaseName'], 
+                                             'Expected': currDict['Expectation']}, 
+                                             ignore_index=True)
 
+for index in caseRepository.index:
 
-for case in caseRepository:
-    print("Case Name : " + case['Name'] + "\n")
-    print("Expected Value : " + case['Expected Value'] + "\n\n")
+    print("Case Name : " + caseRepository.loc[index, 'Name'])
+    print("Expected Value : " + str(caseRepository.loc[index, 'Expected']) + "\n")
