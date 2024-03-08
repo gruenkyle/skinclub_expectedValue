@@ -99,3 +99,24 @@ Expected Value : 0.046113999999999995
 ...
 
 ```
+
+## Expected Output
+```python 
+Case Name : lvl-3
+Expected Value : 0.038869
+
+Case Name : lvl-10
+Expected Value : 0.045092999999999994
+
+Case Name : lvl-20
+Expected Value : 0.046113999999999995
+
+Case Name : lvl-30
+Expected Value : 0.09907460000000001
+
+Case Name : lvl-40
+Expected Value : 0.24282329999999994
+
+Case Name : lvl-50
+Expected Value : 0.5219931
+```
