@@ -119,4 +119,7 @@ Expected Value : 0.24282329999999994
 
 Case Name : lvl-50
 Expected Value : 0.5219931
+
+Case Name : lvl-60
+Expected Value : 1.4671465999999997
 ```
