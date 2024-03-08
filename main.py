@@ -28,6 +28,5 @@ for link in links_array:
                                              ignore_index=True)
 
 for index in caseRepository.index:
-
     print("Case Name : " + caseRepository.loc[index, 'Name'])
     print("Expected Value : " + str(caseRepository.loc[index, 'Expected']) + "\n")
