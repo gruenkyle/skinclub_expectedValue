@@ -47,12 +47,16 @@ def createDictionary(url):
     oddDiv = soup.find_all('div', class_='table-cell odds')
     priceDiv = soup.find_all('span', class_='price')
 
+    
+
     mainFrame = pd.DataFrame(columns=['Odd'])
     priceFrame = pd.DataFrame(columns=['Price'])
 
     for odd in oddDiv:
         mainFrame = mainFrame._append({'Odd': odd.text.strip()}, ignore_index=True)
     for price in priceDiv:
+        if "-" in price:
+            price = price.split("-")[0]
         priceFrame = priceFrame._append({'Price': price.text.strip()}, ignore_index=True)
 
     driver.quit()
